@@ -94,7 +94,7 @@ flowchart LR
       privatert["kubernetes-route-table<br/>0.0.0.0/0 -> NAT instance<br/>::/0 -> IGW"]
 
       subgraph nat_subnet["dualstack-nat-subnet: 10.0.1.0/24 + IPv6 /64"]
-        nat["NAT instance: <br/>Public IPv4 + optional IPv6<br/>Source/destination check disabled<br/>net.ipv4.ip_forward=1<br/>iptables MASQUERADE"]
+        nat["NAT instance: <br/>Public IPv4 + optional IPv6"]
       end
 
       subgraph k8s_subnet["dualstack-k8s-subnet<br/>10.0.0.0/24 + IPv6 /64"]
